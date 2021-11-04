@@ -19,18 +19,18 @@ public class Welcome {
 		switch(random) {
 			case IS_PART_TIME:
 				System.out.println("Employee is Part time");
-				empWage = PART_TIME_HRS * WAGE_PER_HR;
+				empWage = 20 * PART_TIME_HRS * WAGE_PER_HR;
 				break;
 				
 			case IS_FULL_TIME:
 				System.out.println("Employee is Full time");
-				empWage = FULL_TIME_HRS * WAGE_PER_HR;
+				empWage = 20 * FULL_TIME_HRS * WAGE_PER_HR;
 				break;
 			default:
 				System.out.println("Employee is Absent");
 				break;
 		}
-		System.out.println("Employee Wage : " + empWage);
+		System.out.println("Monthly Employee Wage : " + empWage);
 	}
 }
 
