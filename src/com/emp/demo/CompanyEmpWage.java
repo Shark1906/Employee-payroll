@@ -1,13 +1,13 @@
 package com.emp.demo;
 
-public class Company {
+public class CompanyEmpWage {
 	
 	private final int wagePerHr;
 	private final int noOfWorkingDays;
 	private final int hrsPerMonth;
 	private final String name;
 
-	public Company(int wagePerHr, int noOfWorkingDays, int hrsPerMonth, String name) {
+	public CompanyEmpWage(int wagePerHr, int noOfWorkingDays, int hrsPerMonth, String name) {
 		super();
 		this.wagePerHr = wagePerHr;
 		this.noOfWorkingDays = noOfWorkingDays;

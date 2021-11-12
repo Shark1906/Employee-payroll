@@ -5,16 +5,17 @@ import java.util.List;
 
 public class EmpWageBuilder {
 	
+	CompanyEmpWage arrOfCompanies[] = new CompanyEmpWage[5];
 	public static final int IS_ABSENT = 0;
 	public static final int IS_FULL_TIME = 1;
 	public static final int IS_PART_TIME = 2;
 	
-	public int calculateWage(Company company){
+	public int calculateWage(CompanyEmpWage companyEmpWage){
 			
 		int totalWorkingDay = 0;
 		int totalEmpHr =0;
 		
-		while(totalEmpHr <= company.getHrsPerMonth()  && totalWorkingDay < company.getNoOfWorkingDays()) {
+		while(totalEmpHr <= companyEmpWage.getHrsPerMonth()  && totalWorkingDay < companyEmpWage.getNoOfWorkingDays()) {
 		int random = (int)Math.floor(Math.random() * 10 % 3);
 	    totalWorkingDay++;
 	    int empHr = 0;
@@ -37,7 +38,7 @@ public class EmpWageBuilder {
 		}
 		totalEmpHr = totalEmpHr + empHr;
 		}
-		return (totalEmpHr * company.getWagePerHr());		
+		return (totalEmpHr * companyEmpWage.getWagePerHr());		
 	}	
 }
 
