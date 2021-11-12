@@ -1,25 +1,15 @@
 package com.emp.demo;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class EmpWageBuilder {
 	
 	public static final int IS_ABSENT = 0;
 	public static final int IS_FULL_TIME = 1;
 	public static final int IS_PART_TIME = 2;
-	static int totalWage;
 	
-	public static void main(String[] args) {
-		
-		// TODO Auto-generated method stub
-		System.out.println("Welcome to employee wage computation program");
-		Company jio = new Company(20, 20, 100, "Jio");
-		totalWage = new EmpWageBuilder().calculateWage(jio);		
-		System.out.println(jio);
-		Company vi = new Company(50, 30, 120, "Vi");
-		totalWage = new EmpWageBuilder().calculateWage(vi);
-		System.out.println(vi);	
-	}
-	
-	private int calculateWage(Company company){
+	public int calculateWage(Company company){
 			
 		int totalWorkingDay = 0;
 		int totalEmpHr =0;
@@ -48,6 +38,6 @@ public class EmpWageBuilder {
 		totalEmpHr = totalEmpHr + empHr;
 		}
 		return (totalEmpHr * company.getWagePerHr());		
-	}
+	}	
 }
 

@@ -33,6 +33,6 @@ public class Company {
 
 	@Override
 	public String toString() {
-		return "Company Name: " + name + ", Wage : " +EmpWageBuilder.totalWage  ;
+		return "Company Name: " + name + ", Wage : " + new EmpWageBuilder().calculateWage(this);
 	}
 }
