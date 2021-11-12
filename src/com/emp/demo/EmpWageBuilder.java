@@ -16,6 +16,7 @@ public class EmpWageBuilder implements EmpWageInterface {
 			
 		int totalWorkingDay = 0;
 		int totalEmpHr =0;
+		companyEmpWage.dailyWage = new ArrayList();
 		
 		while(totalEmpHr <= companyEmpWage.getHrsPerMonth()  && totalWorkingDay < companyEmpWage.getNoOfWorkingDays()) {
 		int random = (int)Math.floor(Math.random() * 10 % 3);
@@ -38,6 +39,8 @@ public class EmpWageBuilder implements EmpWageInterface {
 				//System.out.println("Employee is Absent");
 				break;
 		}
+		int dailyWage = empHr * companyEmpWage.getWagePerHr();
+		companyEmpWage.dailyWage.add(dailyWage);
 		totalEmpHr = totalEmpHr + empHr;
 		}
 		return (totalEmpHr * companyEmpWage.getWagePerHr());		

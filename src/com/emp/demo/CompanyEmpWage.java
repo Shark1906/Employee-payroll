@@ -1,11 +1,14 @@
 package com.emp.demo;
 
+import java.util.List;
+
 public class CompanyEmpWage {
 	
 	private final int wagePerHr;
 	private final int noOfWorkingDays;
 	private final int hrsPerMonth;
 	private final String name;
+	List<Integer> dailyWage;
 
 	public CompanyEmpWage(int wagePerHr, int noOfWorkingDays, int hrsPerMonth, String name) {
 		super();
@@ -33,6 +36,7 @@ public class CompanyEmpWage {
 
 	@Override
 	public String toString() {
-		return "Company Name: " + name + ", Wage : " + new EmpWageBuilder().calculateWage(this);
+		return "Company Name: " + name + ", Wage : " + new EmpWageBuilder().calculateWage(this) + 
+				" Daily Wage: " + dailyWage;
 	}
 }
