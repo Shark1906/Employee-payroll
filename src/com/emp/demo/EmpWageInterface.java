@@ -7,5 +7,7 @@ public interface EmpWageInterface {
 	public void addCompanyEmpWage(CompanyEmpWage companyEmpWage);
 	
 	public void printAllCompanyEmpWage();
+	
+	public void printCompanyDetails(CompanyEmpWage companyEmpWage);
 
 }

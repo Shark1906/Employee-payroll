@@ -43,6 +43,7 @@ public class EmpWageBuilder implements EmpWageInterface {
 		companyEmpWage.dailyWage.add(dailyWage);
 		totalEmpHr = totalEmpHr + empHr;
 		}
+		companyEmpWage.setTotalwage(totalEmpHr * companyEmpWage.getWagePerHr());
 		return (totalEmpHr * companyEmpWage.getWagePerHr());		
 	}
 	
@@ -55,6 +56,17 @@ public class EmpWageBuilder implements EmpWageInterface {
 	public void printAllCompanyEmpWage() {
 		for (int i = 0; i < companyEmpWageList.size(); i++) {
 			System.out.println(companyEmpWageList.get(i));
+		}
+	}
+	
+	@Override
+	public void printCompanyDetails(CompanyEmpWage companyEmpWage) {
+		for (int i = 0; i < companyEmpWageList.size(); i++) {
+			if(companyEmpWageList.get(i).equals(companyEmpWage)) {
+				System.out.println("Company Name: " + companyEmpWage.getName() +
+						", Total Wage: " + companyEmpWage.getTotalwage());
+			}
+			
 		}
 	}
 }

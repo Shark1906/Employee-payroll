@@ -13,6 +13,7 @@ public class Main {
 	builder.calculateWage(vi);
 	builder.addCompanyEmpWage(vi);
 	builder.printAllCompanyEmpWage();
+	builder.printCompanyDetails(vi);
 	
 	}
 }

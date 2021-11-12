@@ -9,7 +9,8 @@ public class CompanyEmpWage {
 	private final int hrsPerMonth;
 	private final String name;
 	List<Integer> dailyWage;
-
+	private int totalwage;
+	
 	public CompanyEmpWage(int wagePerHr, int noOfWorkingDays, int hrsPerMonth, String name) {
 		super();
 		this.wagePerHr = wagePerHr;
@@ -33,10 +34,18 @@ public class CompanyEmpWage {
 	public String getName() {
 		return name;
 	}
+	
+	public void setTotalwage(int totalwage) {
+		this.totalwage = totalwage;
+	}
 
+	public int getTotalwage() {
+		return totalwage;
+	}
+	
 	@Override
 	public String toString() {
-		return "Company Name: " + name + ", Wage : " + new EmpWageBuilder().calculateWage(this) + 
+		return "Company Name: " + name + ", Wage : " + totalwage + 
 				" Daily Wage: " + dailyWage;
-	}
+	}	
 }
