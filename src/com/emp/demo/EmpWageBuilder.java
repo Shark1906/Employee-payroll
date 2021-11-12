@@ -1,8 +1,12 @@
 package com.emp.demo;
 
+import java.util.ArrayList;
+import java.util.List;
+
+
 public class EmpWageBuilder implements EmpWageInterface {
 	
-	CompanyEmpWage arrOfCompanies[] = new CompanyEmpWage[5];
+	private List<CompanyEmpWage> companyEmpWageList = new  ArrayList<>();
 	public static final int IS_ABSENT = 0;
 	public static final int IS_FULL_TIME = 1;
 	public static final int IS_PART_TIME = 2;
@@ -38,5 +42,18 @@ public class EmpWageBuilder implements EmpWageInterface {
 		}
 		return (totalEmpHr * companyEmpWage.getWagePerHr());		
 	}
+	
+	@Override
+	public void addCompanyEmpWage(CompanyEmpWage companyEmpWage) {
+		companyEmpWageList.add(companyEmpWage);	
+	}
+
+	@Override
+	public void printAllCompanyEmpWage() {
+		for (int i = 0; i < companyEmpWageList.size(); i++) {
+			System.out.println(companyEmpWageList.get(i));
+		}
+	}
 }
+
 
